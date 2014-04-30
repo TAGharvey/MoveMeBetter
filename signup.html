@@ -48,25 +48,35 @@
 		
 		</form>
 		<div role="main" class="ui-content">
-			<a href="#dialogPage" data-rel="dialog" data-role="button">Submit</a>
+			<a href="#popupDialogue" data-rel="popup" data-role="button">Submit</a>
+			<div data-role="popup" id="popupDialogue">
+				<div data-role="header">
+					<h2>Congratulations</h2>
+				</div>
+				<div role="main" class="ui-content">
+					<p>Your ID & Password were accepted </p>
+					<a href="login.html" data-transition="slide" data-role="button" rel="external">OK</a>
+				</div>
+			</div>
 		</div>
 	</div>
 	
 	<footer data-role="footer" data-position="fixed">
-	    <h1>Footer</h1>
+	    <div data-role="navbar">
+		  <ul>
+			<li><a href="index.html" data-transition="slide" data-role="button" rel="external" data-icon="arrow-l">Back</a>
+			</li>
+		  </ul>
+		</div>
 	</footer>
 	</section>
 	
 </section>
-<div data-role="page" id="dialogPage">
-		<div data-role="header">
-			<h2>Dialog</h2>
-		</div>
-		<div role="main" class="ui-content">
-			<p>Do you want to proceed?</p>
-			<a href="home.html" data-transition="slide" data-role="button" rel="external">OK</a>
-			<a href="signup.html" data-transition="slide" data-role="button" rel="external">Cancel</a>
-		</div>
-</div>
+
+
+
+
+
+
 </body>
 </html>
