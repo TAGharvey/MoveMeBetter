@@ -273,13 +273,21 @@
 	<div data-role="collapsible-set" data-theme="a" data-content-theme="d">
 	
 		<div>
-			<h4>Welcome</h4>
-			<p>Grid of recordings.</p>
-			<p>Add some text.</p>
-			
+		<p><strong>Move Name</strong></p>
+			<input type=text list=moves placeholder="select an existing move or type a new one" >
+			<datalist id=moves >
+				<option> Flag
+				<option> Handstand
+				<option> Hurricane
+				<option> Waterfall
+			</datalist>
 		</div>
+		<br />
+		<br />
 		<div data-role="content">
-			<!-- <button id="chooseFile" >Choose file</button>
+		<p><strong>Find your move</strong></p>
+
+		<!-- <button id="chooseFile" >Choose file</button>
 			<button id="mymoves">Accept</button>
 			<a href="#newmove" data-transition="slide" data-role="button">Cancel</a> -->
 			<div class="hiddenfile">
@@ -301,7 +309,7 @@
 					<a href="#home" data-transition="slide" data-direction= "reverse" data-role="button">OK</a>
 				</div>
 			</div>
-			<a href="#home" data-transition="slide" data-role="button">Cancel</a>
+<!--			<a href="#home" data-transition="slide" data-role="button">Cancel</a> -->
         </div>
 		<!-- <script type="text/javascript" src="/js/uploadfiles.js"></script> -->
 	 </div>
