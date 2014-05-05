@@ -220,31 +220,38 @@
  ------------------------------------------------------------->
 
 
- <section data-role="page" id="record">
-	<header data-role="header">
-		<h1>Home</h1>
-	</header>		
-	<section data-role="content">
-	    
-	<div data-role="collapsible-set" data-theme="a" data-content-theme="d">
-		<div>
+ 
+<section data-role="page" id="record">
+<header data-role="header">
+<h1>Home</h1>
+</header>
+
+<section data-role="content">
+<div data-content-theme="d" data-role="collapsible-set" data-theme="a"><!-- <div>
 			<h4>Welcome</h4>
 			<p>The record screen goes here.</p>
 			<p>Add some text.</p>
-		</div>
-	</section>
-		
-	<footer data-role="footer" data-position="fixed">
-	    
-	    <div data-role="navbar">
-		  <ul>
-			<li><a href="#home" data-transition="slide" data-role="button" data-icon="home">Home</a></li>
-			<li><a href="#newmove" data-transition="slide" data-direction= "reverse" data-role="button" data-icon="arrow-l">Back</a></li>
-		  </ul>
-		</div>
-	</footer>
+		</div> -->
+<div id="container">
+<div class="select"><label for="audioSource">Audio source: </label><select id="audioSource"></select></div>
 
+<div class="select"><label for="videoSource">Video source: </label><select id="videoSource"></select></div>
+
+<video autoplay="" muted=""></video>
+<script src='js/main.js'></script></div>
+</div>
 </section>
+
+<footer data-position="fixed" data-role="footer">
+<div data-role="navbar">
+<ul>
+	<li><a data-icon="home" data-role="button" data-transition="slide" href="#home">Home</a></li>
+	<li><a data-direction="reverse" data-icon="arrow-l" data-role="button" data-transition="slide" href="#newmove">Back</a></li>
+</ul>
+</div>
+</footer>
+</section>
+
  <!--Page------------------------------------------------------
   LEVEL 3
   #home#newmove#->Upload
@@ -570,8 +577,24 @@
 			<div>
 				<textarea id="Status" placeholder="How are you going with your Handstand?"  class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset" cols="30" rows="7"></textarea>
 			</div>
-			<p>chronological recordings here.</p>
-		</div>
+			<div>
+				<p>5/5/2014 <br>
+					<video style="width:320px;height:240px;" src="videos/Handstand 3.mp4" controls>
+					</video>
+				</p>
+			</div>
+			<div>
+				<p>4/5/2014 <br>
+					<video style="width:320px;height:240px;" src="videos/Handstand 1.mp4" controls>
+					</video>
+				</p>
+			</div>
+			<div>
+				<p>2/5/2014 <br>
+					<video style="width:320px;height:240px;" src="videos/Handstand against door 1.mp4" controls>
+					</video>
+				</p>
+			</div>
 	</section>
 		
 	<footer data-role="footer" data-position="fixed">
