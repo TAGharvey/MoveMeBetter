@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en" manifest="offline.appcache">
+<!------------------------------------------------------------
+    Notes:
+ ------------------------------------------------------------->
+<head>
+    <title>App Name</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/blackwhite.css"/>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+   <!--  <script src="js/core.js"></script> -->
+	
+<!--	<script src="js/saveQuizAnswer.js"></script> -->
+<!--	<script src="js/savingCharacter.js"></script>
+<!--	<script src="js/databaseJS.js"></script> -->
+	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+	<script type="text/javascript" src="js/uploadfiles.js"></script> 
+	<script type="text/javascript" src="js/randomnumber.js"></script> 
+  <!--   <script type="text/javascript" src="/js/modernizr.js"></script>
+    <script type="text/javascript" src="js/hit238.js"></script>
+	<script type="text/javascript" src="js/core.js"></script>
+	<script type="text/javascript" src="js/savingCharacter.js"></script> -->
+</head> 
+<body>
+	
+<!--    <section data-role="page" id="mypage">
+	<p class="message"></p>
+    </section>
+	
+
+ <!--Page------------------------------------------------------
+ LEVEL 1
+    Home screen
+    >> 	1. New Move
+	2. Practice Move
+	3. Compare Move
+	4. My moves
+ ------------------------------------------------------------->
+ <section data-role="page" id="home">
+	<header data-role="header">
+		<h1>Home</h1>
+	</header>		
+	<section data-role="content">
+	    
+	<div data-role="collapsible-set" data-theme="a" data-content-theme="d">
+		<div>
+			<h4>Hello there 'User ID' :)</h4>
+			<a href="#newmove" data-transition="slide" data-role="button">New Move</a>
+			<a href="#mymoves" data-transition="slide" data-role="button">My Moves</a>
+			<a href="#practice" data-transition="slide" data-role="button">Practice Moves</a>
+			<a href="#compare" data-transition="slide" data-role="button">Compare Moves</a>
+			
+			<p>Add some text.</p>
+		</div>
+	</section>
+		
+	<footer data-role="footer" data-position="fixed">
+	<div data-role="navbar">
+		<ul>
+			<li>
+				<a href="index.html" data-transition="slide" data-role="button" rel="external"data-icon="arrow-l">Log Out</a>
+			</li>
+			
+			<li><a href="JavaScript:window.close()" data-transition="slide" data-role="button" data-icon="delete" rel="external">EXIT</a>
+			</li>
+		</ul>
+		</div>
+	</footer>
+
+</section>
+ <!--Page------------------------------------------------------
+ LEVEL 2
+    New move
+	3. Record
+	4. Upload
+ ------------------------------------------------------------->
+ <section data-role="page" id="newmove">
+	<header data-role="header">
+		<h1>New Move</h1>
+	</header>		
+	<section data-role="content">
+	    
+	<div data-role="collapsible-set" data-theme="a" data-content-theme="d">
+		<div>
+			<p>You can chose to film a move or add one previously saved on your device<p>
+			<a href="#record" data-transition="slide" data-role="button">Record</a>
+			<a href="#upload" data-transition="slide" data-role="button">Upload</a>
+		</div>
+	</section>
+		
+	<footer data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+		  <ul>
+			<li><a href="#home" data-transition="slide" data-role="button" data-icon="home">Home</a></li>
+			<li><a href="#home" data-transition="slide" data-direction= "reverse" data-role="button" data-icon="arrow-l">Back</a></li>
+		  </ul>
+		</div>
+		
+		
+	</footer>
+
+</section>
+ <!--Page------------------------------------------------------
+  LEVEL 2
+    My moves
+    >	?
+ ------------------------------------------------------------->
+ <section data-role="page" id="mymoves">
+	<header data-role="header">
+		<h1>My Moves</h1>
+	</header>		
+	<section data-role="content">
+	    <p>Please select a move to view your related videos</p>
+	<div data-role="collapsible-set" data-theme="a" data-content-theme="d">
+		<div>
+			<a href="#list01" data-transition="slide" data-role="button">Flag</a>
+			<a href="#list02" data-transition="slide" data-role="button">Hurricane</a>
+			<a href="#list03" data-transition="slide" data-role="button">Handstand</a>
+			<a href="#list04" data-transition="slide" data-role="button">Waterfall</a>
+		</div>
+	</section>
+		
+	<footer data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+		  <ul>
+			<li><a href="#home" data-transition="slide" data-role="button" data-icon="home">Home</a></li>
+			<li><a href="#home" data-transition="slide" data-direction= "reverse" data-role="button" data-icon="arrow-l">Back</a></li>
+		  </ul>
+		</div>
+	</footer>
+
+</section>
+
+ <!--Page------------------------------------------------------
+  LEVEL 2
+    Practice
+    >	1. Random
+	2. Select move
+ ------------------------------------------------------------->
+ <section data-role="page" id="practice">
+	<header data-role="header">
+		<h1>Practice</h1>
+	</header>		
+	<section data-role="content">
+	    
+	<div data-role="collapsible-set" data-theme="a" data-content-theme="d">
+		<div>
+			<a href="#" id="getit" data-transition="slide" data-role="button">Random move</a>
+			<a href="#selectmove" data-transition="slide" data-role="button">Select move</a>
+			<p>Would you like to practice a specific move or would you like me to pick one for you?.</p>
+		</div>
+	</section>
+		
+	<footer data-role="footer" data-position="fixed">
+	    
+		
+	    <div data-role="navbar">
+		  <ul>
+			<li><a href="#home" data-transition="slide" data-role="button" data-icon="home">Home</a></li>
+			<li><a href="#home" data-transition="slide" data-direction= "reverse" data-role="button" data-icon="arrow-l">Back</a></li>
+		  </ul>
+		</div>
+	</footer>
+
+</section>
+<!--Page------------------------------------------------------
+ LEVEL 2
+    Compare
+    >>	
+ ------------------------------------------------------------->
+<section data-role="page" id="compare">
+	<header data-role="header">
+		<h1>Compare</h1>
+	</header>		
+	<section data-role="content">
+	    
+	<div data-role="collapsible-set" data-theme="a" data-content-theme="d">
+		<div>
+			<h4>Welcome</h4>
+			<p>Two videos or images side by side.</p>
+			<p>Add some text.</p>
+		</div>
+		<div role="main" class="ui-content">
+		
+			<p>Assume buttons would be the video container</p>
+			<a href="#dialogPage" data-rel="dialog" data-role="button">Video 1</a>
+			<a href="#dialogPage" data-rel="dialog" data-role="button">Video 2</a>
+		</div>
+	</section>
+		
+	<footer data-role="footer" data-position="fixed">
+	    
+	    <div data-role="navbar">
+		  <ul>
+			<li><a href="#home" data-transition="slide" data-role="button" data-icon="home">Home</a></li>
+			<li><a href="#home" data-transition="slide" data-direction= "reverse" data-role="button" data-icon="arrow-l">Back</a></li>
+		  </ul>
+		</div>
+	</footer>
+
+</section>
+<!-- Dialog box to browse files -->
+<div data-role="page" id="dialogPage">
+  <div data-role="header">
+    <h2>Dialog</h2>
+  </div>
+  <div role="main" class="ui-content">
+    <p>this is a dialog box to facilitate browsing of files(videos) to compare or click the myVideos button to go to existing videos</p>
+	<a href="#mymoves" data-transition="slide" data-role="button">myMove</a>
+	<a href="#mymoves" data-transition="slide" data-role="button">Choose File</a>
+  </div>
+
+
+	</div>
+ <!--Page------------------------------------------------------
+  LEVEL 3
+  #home#newmove#->Record
+ ------------------------------------------------------------->
+
+
+ <section data-role="page" id="record">
+	<header data-role="header">
+		<h1>Home</h1>
+	</header>		
+	<section data-role="content">
+	    
+	<div data-role="collapsible-set" data-theme="a" data-content-theme="d">
+		<div>
+			<h4>Welcome</h4>
+			<p>The record screen goes here.</p>
+			<p>Add some text.</p>
+		</div>
+	</section>
+		
+	<footer data-role="footer" data-position="fixed">
+	    
+	    <div data-role="navbar">
+		  <ul>
+			<li><a href="#home" data-transition="slide" data-role="button" data-icon="home">Home</a></li>
+			<li><a href="#newmove" data-transition="slide" data-direction= "reverse" data-role="button" data-icon="arrow-l">Back</a></li>
+		  </ul>
+		</div>
+	</footer>
+
+</section>
+ <!--Page------------------------------------------------------
+  LEVEL 3
+  #home#newmove#->Upload
+ ------------------------------------------------------------->
+ <section data-role="page" id="upload">
+ 
+		<!-- <style>
+			#preview {
+				width: 80%; max-width: 300px;
+			}
+			#preview img {
+				width: 100%;
+			}
+			.hiddenfile {
+			 width: 0px;
+			 height: 0px;
+			 overflow: hidden;
+			}
+		</style> -->
+		
+	<header data-role="header">
+		<h1>Upload</h1>
+	</header>		
+	<section data-role="content">
+	    
+	<div data-role="collapsible-set" data-theme="a" data-content-theme="d">
+	
+		<div>
+		<p><strong>Move Name</strong></p>
+			<input type=text list=moves placeholder="select an existing move or type a new one" >
+			<datalist id=moves >
+				<option> Flag
+				<option> Handstand
+				<option> Hurricane
+				<option> Waterfall
+			</datalist>
+		</div>
+		<br />
+		<br />
+		<div data-role="content">
+		<p><strong>Find your move</strong></p>
+
+		<!-- <button id="chooseFile" >Choose file</button>
+			<button id="mymoves">Accept</button>
+			<a href="#newmove" data-transition="slide" data-role="button">Cancel</a> -->
+			<div class="hiddenfile">
+			  <input type="file"  data-clear-btn="false" name="image" accept="image/*" capture>
+			</div>
+			<div id="preview">
+			</div>
+			<ul id="info" data-role="listview" data-inset="true">
+			</ul>
+			
+			
+			<a href="#popupDialogue" data-rel="popup" data-role="button">Accept</a>
+			<div data-role="popup" id="popupDialogue">
+				<div data-role="header">
+					<h2>Congratulations</h2>
+				</div>
+				<div role="main" class="ui-content">
+					<p>Your move has been saved </p>
+					<a href="#home" data-transition="slide" data-direction= "reverse" data-role="button">OK</a>
+				</div>
+			</div>
+<!--			<a href="#home" data-transition="slide" data-role="button">Cancel</a> -->
+        </div>
+		<!-- <script type="text/javascript" src="/js/uploadfiles.js"></script> -->
+	 </div>
+	</section>
+		
+	<footer data-role="footer" data-position="fixed">
+	    
+	    <div data-role="navbar">
+		  <ul>
+			<li><a href="#home" data-transition="slide" data-role="button" data-icon="home">Home</a></li>
+			<li><a href="#newmove" data-transition="slide" data-direction= "reverse" data-role="button" data-icon="arrow-l">Back</a></li>
+		  </ul>
+		</div>
+	</footer>
+
+</section>
+
+<!--Page------------------------------------------------------
+  LEVEL 3
+  #home#mymove#->list01 Flag"Progress"
+ ------------------------------------------------------------->
+  <section data-role="page" id="list01">
+	<header data-role="header">
+		<h1>myMove - Flag</h1>
+	</header>		
+	<section data-role="content">
+	    <h1>Move Progress</h1>
+		<div data-role="collapsible-set" data-theme="a" data-content-theme="d">
+			<div>
+				<textarea id="Status" placeholder="How are you going with your Flag?"  class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset" cols="30" rows="7"></textarea>
+			</div>
+			<p>chronological recordings here.</p>
+		</div>
+	</section>
+	<footer data-role="footer" data-position="fixed">
+	    <div data-role="navbar">
+		  <ul>
+			<li><a href="#home" data-transition="slide" data-role="button" data-icon="home">Home</a></li>
+			<li><a href="#mymoves" data-transition="slide" data-direction= "reverse" data-role="button" data-icon="arrow-l">Back</a></li>
+		  </ul>
+		</div>
+	</footer>
+</section>
+<!--Page------------------------------------------------------
+  LEVEL 3
+  #home#mymove#->list02 - Hurricane "Progress"
+ ------------------------------------------------------------->
+ <section data-role="page" id="list02">
+	<header data-role="header">
+		<h1>myMoves</h1>
+	</header>		
+		<section data-role="content">
+	    <h1>Move Progress</h1>
+		<div data-role="collapsible-set" data-theme="a" data-content-theme="d">
+			<div>
+				<textarea id="Status" placeholder="How are you going with your Hurricane?"  class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset" cols="30" rows="7"></textarea>
+			</div>
+			<p>chronological recordings here.</p>
+		</div>
+	</section>
+		
+	<footer data-role="footer" data-position="fixed">
+	    
+	    <div data-role="navbar">
+		  <ul>
+			<li><a href="#home" data-transition="slide" data-role="button" data-icon="home">Home</a></li>
+			<li><a href="#mymoves" data-transition="slide" data-direction= "reverse" data-role="button" data-icon="arrow-l">Back</a></li>
+		  </ul>
+		</div>
+	</footer>
+
+</section>
+<!--Page------------------------------------------------------
+  LEVEL 3
+  #home#mymove#->list03 - Handstand "Progress"
+ ------------------------------------------------------------->
+ <section data-role="page" id="list03">
+	<header data-role="header">
+		<h1>myMoves</h1>
+	</header>		
+	<section data-role="content">
+	    <h1>Move Progress</h1>
+		<div data-role="collapsible-set" data-theme="a" data-content-theme="d">
+			<div>
+				<textarea id="Status" placeholder="How are you going with your Handstand?"  class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset" cols="30" rows="7"></textarea>
+			</div>
+			<p>chronological recordings here.</p>
+		</div>
+	</section>
+		
+	<footer data-role="footer" data-position="fixed">
+	    
+	    <div data-role="navbar">
+		  <ul>
+			<li><a href="#home" data-transition="slide" data-role="button" data-icon="home">Home</a></li>
+			<li><a href="#mymoves" data-transition="slide" data-direction= "reverse" data-role="button" data-icon="arrow-l">Back</a></li>
+		  </ul>
+		</div>
+	</footer>
+
+</section>
+<!--Page------------------------------------------------------
+  LEVEL 3
+  #home#mymove#->list04 - Waterfall "Progress"
+ ------------------------------------------------------------->
+ <section data-role="page" id="list04">
+	<header data-role="header">
+		<h1>myMoves</h1>
+	</header>		
+	<section data-role="content">
+	    <h1>Move Progress</h1>
+		<div data-role="collapsible-set" data-theme="a" data-content-theme="d">
+			<div>
+				<textarea id="Status" placeholder="How are you going with your Waterfall?"  class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset" cols="30" rows="7"></textarea>
+			</div>
+			<p>chronological recordings here.</p>
+		</div>
+	</section>
+		
+	<footer data-role="footer" data-position="fixed">
+	    
+	    <div data-role="navbar">
+		  <ul>
+			<li><a href="#home" data-transition="slide" data-role="button" data-icon="home">Home</a></li>
+			<li><a href="#mymoves" data-transition="slide" data-direction= "reverse" data-role="button" data-icon="arrow-l">Back</a></li>
+		  </ul>
+		</div>
+	</footer>
+
+</section>
+
+<!--Page------------------------------------------------------
+  LEVEL 3
+  #home#practice#->Random
+ ------------------------------------------------------------->
+ <section data-role="page" id="random">
+	<header data-role="header">
+		<h1>Random</h1>
+	</header>		
+	<section data-role="content">
+	<div data-role="collapsible-set" data-theme="a" data-content-theme="d">
+		<div>
+			<h4>Welcome</h4>
+			<p>Random video will be played here.</p>
+			<p>Add some text.</p>
+		</div>
+	</section>
+		
+	<footer data-role="footer" data-position="fixed">
+	    
+	    <div data-role="navbar">
+		  <ul>
+			<li><a href="#home" data-transition="slide" data-role="button" data-icon="home">Home</a></li>
+			<li><a href="#practice" data-transition="slide" data-direction= "reverse" data-role="button" data-icon="arrow-l">Back</a></li>
+		  </ul>
+		</div>
+	</footer>
+
+</section>
+
+<!--Page------------------------------------------------------
+  LEVEL 3
+    Select move
+    >	?
+ ------------------------------------------------------------->
+ <section data-role="page" id="selectmove">
+	<header data-role="header">
+		<h1>Select Move</h1>
+	</header>		
+	<section data-role="content">
+	    <p>Please select a move to view your related videos</p>
+	<div data-role="collapsible-set" data-theme="a" data-content-theme="d">
+		<div>
+			<a href="#selectmove01" data-transition="slide" data-role="button">Flag</a>
+			<a href="#selectmove02" data-transition="slide" data-role="button">Hurricane</a>
+			<a href="#selectmove03" data-transition="slide" data-role="button">Handstand</a>
+			<a href="#selectmove04" data-transition="slide" data-role="button">Waterfall</a>
+		</div>
+	</section>
+		
+	<footer data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+		  <ul>
+			<li><a href="#home" data-transition="slide" data-role="button" data-icon="home">Home</a></li>
+			<li><a href="#practice" data-transition="slide" data-direction= "reverse" data-role="button" data-icon="arrow-l">Back</a></li>
+		  </ul>
+		</div>
+	</footer>
+
+</section>
+
+<!--Page------------------------------------------------------
+  LEVEL 3
+  #home#mymove#-> Flag "Selection"
+ ------------------------------------------------------------->
+  <section data-role="page" id="selectmove01">
+	<header data-role="header">
+		<h1>Move Selected - Flag</h1>
+	</header>		
+	<section data-role="content">
+	    <h1>Move Progress</h1>
+		<div data-role="collapsible-set" data-theme="a" data-content-theme="d">
+			<div>
+				<textarea id="Status" placeholder="How are you going with your Flag?"  class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset" cols="30" rows="7"></textarea>
+			</div>
+			<p>chronological recordings here.</p>
+		</div>
+	</section>
+	<footer data-role="footer" data-position="fixed">
+	    <div data-role="navbar">
+		  <ul>
+			<li><a href="#home" data-transition="slide" data-role="button" data-icon="home">Home</a></li>
+			<li><a href="#selectmove" data-transition="slide" data-direction= "reverse" data-role="button" data-icon="arrow-l">Back</a></li>
+		  </ul>
+		</div>
+	</footer>
+</section>
+<!--Page------------------------------------------------------
+  LEVEL 3
+  #home#mymove#->list02 - Hurricane "Selected"
+ ------------------------------------------------------------->
+ <section data-role="page" id="selectmove02">
+	<header data-role="header">
+		<h1>Move Selected - Hurricane</h1>
+	</header>		
+		<section data-role="content">
+	    <h1>Move Progress</h1>
+		<div data-role="collapsible-set" data-theme="a" data-content-theme="d">
+			<div>
+				<textarea id="Status" placeholder="How are you going with your Hurricane?"  class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset" cols="30" rows="7"></textarea>
+			</div>
+			<p>chronological recordings here.</p>
+		</div>
+	</section>
+		
+	<footer data-role="footer" data-position="fixed">
+	    
+	    <div data-role="navbar">
+		  <ul>
+			<li><a href="#home" data-transition="slide" data-role="button" data-icon="home">Home</a></li>
+			<li><a href="#selectmove" data-transition="slide" data-direction= "reverse" data-role="button" data-icon="arrow-l">Back</a></li>
+		  </ul>
+		</div>
+	</footer>
+
+</section>
+<!--Page------------------------------------------------------
+  LEVEL 3
+  #home#mymove#-> Handstand "Selected"
+ ------------------------------------------------------------->
+ <section data-role="page" id="selectmove03">
+	<header data-role="header">
+		<h1>Move Selected - Handstand</h1>
+	</header>		
+	<section data-role="content">
+	    <h1>Move Progress</h1>
+		<div data-role="collapsible-set" data-theme="a" data-content-theme="d">
+			<div>
+				<textarea id="Status" placeholder="How are you going with your Handstand?"  class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset" cols="30" rows="7"></textarea>
+			</div>
+			<p>chronological recordings here.</p>
+		</div>
+	</section>
+		
+	<footer data-role="footer" data-position="fixed">
+	    
+	    <div data-role="navbar">
+		  <ul>
+			<li><a href="#home" data-transition="slide" data-role="button" data-icon="home">Home</a></li>
+			<li><a href="#selectmove" data-transition="slide" data-direction= "reverse" data-role="button" data-icon="arrow-l">Back</a></li>
+		  </ul>
+		</div>
+	</footer>
+
+</section>
+<!--Page------------------------------------------------------
+  LEVEL 3
+  #home#mymove#->list04 - Waterfall "Selected"
+ ------------------------------------------------------------->
+ <section data-role="page" id="selectmove04">
+	<header data-role="header">
+		<h1>Move Selected - Waterfall</h1>
+	</header>		
+	<section data-role="content">
+	    <h1>Move Progress</h1>
+		<div data-role="collapsible-set" data-theme="a" data-content-theme="d">
+			<div>
+				<textarea id="Status" placeholder="How are you going with your Waterfall?"  class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset" cols="30" rows="7"></textarea>
+			</div>
+			<p>chronological recordings here.</p>
+		</div>
+	</section>
+		
+	<footer data-role="footer" data-position="fixed">
+	    
+	    <div data-role="navbar">
+		  <ul>
+			<li><a href="#home" data-transition="slide" data-role="button" data-icon="home">Home</a></li>
+			<li><a href="#selectmove" data-transition="slide" data-direction= "reverse" data-role="button" data-icon="arrow-l">Back</a></li>
+		  </ul>
+		</div>
+	</footer>
+
+</section>
+
+
+
+
+
+<!--Page------------------------------------------------------
+    Save File
+    >>	
+ ------------------------------------------------------------->
+<section data-role="page" id="filesave">
+	<header data-role="header">
+		<h1>Home</h1>
+	</header>		
+	<section data-role="content">
+	    
+	<div data-role="collapsible-set" data-theme="a" data-content-theme="d">
+		<div>
+			<h4>Welcome</h4>
+			<p>Details to save maove.</p>
+			<p>Add some text.</p>
+		</div>
+	</section>
+		
+	<footer data-role="footer" data-position="fixed">
+	    
+	    <a href="#page1" data-transition="slide" data-role="button">Start</a>
+	</footer>
+
+</section>
+<!--Page------------------------------------------------------
+    Play
+    >>	
+ ------------------------------------------------------------->
+<section data-role="page" id="play">
+	<header data-role="header">
+		<h1>Home</h1>
+	</header>		
+	<section data-role="content">
+	    
+	<div data-role="collapsible-set" data-theme="a" data-content-theme="d">
+		<div>
+			<h4>Play</h4>
+			<p>Play back video or images.</p>
+		</div>
+	</section>
+		
+	<footer data-role="footer" data-position="fixed">
+	    
+	    <a href="#page1" data-transition="slide" data-role="button">Start</a>
+	</footer>
+
+</section>
+
+
+
+</body>
+</html>
