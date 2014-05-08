@@ -58,8 +58,8 @@
         <h4>
 	    <fieldset class="ui-grid-b">
 		<div class="ui-block-a"><a href="#nav-panel" data-theme="c" data-role="button">Menu</a></div>
-		<div class="ui-block-b"><button type="submit" data-theme="a" >Quick Capture</button></div>
-		<div class="ui-block-c"><a href="#add-form" data-theme="c" data-role="button">Add</a></div>
+		<div class="ui-block-b"><a href="#quickRecord" data-theme="a" data-role="button">Quick Capture</a></div>
+		<div class="ui-block-c"><a href="#add-form" data-theme="c" data-role="button">Log In</a></div>
 	    </fieldset>
 	</h4>
     </div><!-- /footer -->
@@ -92,6 +92,35 @@
 </div>
  
 
+  <!--Page------------------------------------------------------
+Quik Record
+ ------------------------------------------------------------->
+
+
+ 
+<section data-role="page" id="quickRecord">
+
+
+<section data-role="content">
+
+
+
+<video autoplay="" muted=""></video>
+<script src='js/main.js'></script></div>
+</div>
+</section>
+
+<footer data-position="fixed" data-role="footer">
+<div data-role="navbar">
+<ul>
+	<li><a data-role="button" href="#startrecord">Record</a></li>
+	<li><a data-role="button" href="#saverecord">Save</a></li>
+</ul>
+</div>
+</footer>
+</section>
+ 
+ 
  <!--Page------------------------------------------------------
  LEVEL 2
     New move
@@ -194,23 +223,44 @@
  ------------------------------------------------------------->
 <section data-role="page" id="compare">
 	<header data-role="header">
-		<h1>Compare</h1>
+		<h1>Compare Moves</h1>
 	</header>		
 	<section data-role="content">
 	    
 	<div data-role="collapsible-set" data-theme="a" data-content-theme="d">
-		<div>
-			<h4>Welcome</h4>
-			<p>Two videos or images side by side.</p>
-			<p>Add some text.</p>
-		</div>
-		<div role="main" class="ui-content">
-		
-			<p>Assume buttons would be the video container</p>
-			<a href="#dialogPage" data-rel="dialog" data-role="button">Video 1</a>
-			<a href="#dialogPage" data-rel="dialog" data-role="button">Video 2</a>
-		</div>
+	    
+	    <div data-role="footer" data-position="fixed" data-theme="f">
+        <h4>
+	    <fieldset class="ui-grid-b">
+		<div class="ui-block-a"><a href="#vidselect1" data-theme="c" data-role="button">Vid 1</a></div>
+		<div class="ui-block-b"><a href="#playcompare" data-theme="a" data-role="button">Play</a></div>
+		<div class="ui-block-c"><a href="#vidselect2" data-theme="c" data-role="button">Vid 2</a></div>
+	    </fieldset>
+	</h4>
+    </div><!-- /footer -->
+    
 	</section>
+	
+	
+    <div data-role="panel" data-position-fixed="true" data-display="overlay" data-theme="a" id="vidselect1">
+        <ul data-role="listview" data-theme="a" class="nav-search">
+            <li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
+	        <li><a href="#list03" data-rel="dialog">Handstand</a></li>
+                <li><a href="#list04" data-rel="dialog">SneakyV</a></li>
+        </ul>
+    </div><!-- /panel -->
+    
+    
+    <div data-role="panel" data-position="right" data-position-fixed="true" data-display="overlay" data-theme="a" id="vidselect2">
+	<ul data-role="listview" data-theme="a" class="nav-search">
+            <li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
+                <li><a href="#handstandlist" data-rel="dialog">Handstand</a></li>
+                <li><a href="#sneakyVlist" data-rel="dialog">SneakyV</a></li>
+
+        </ul>
+    </div><!-- /panel -->
+    
+    
 		
 	<footer data-role="footer" data-position="fixed">
 	    
@@ -236,6 +286,63 @@
 
 
 	</div>
+
+	
+ <!--Page------------------------------------------------------
+
+  #home#newmove#Record->compare 2 videos
+ ------------------------------------------------------------->
+<section data-role="page" id="playcompare">		
+    <section data-role="content">   
+	<div data-role="collapsible-set" data-theme="a" data-content-theme="d">
+	    <div>
+		<div>
+		    
+		    
+		    
+		    <video style="width:320px;height:240px;" src="videos/Handstand 3.mp4" controls></video>
+		
+		
+		
+		<form>
+    <div class="ui-grid-a">
+        <div class="ui-block-a">
+            
+            <input type="range" name="slider-13" id="slider-13" data-mini="true" data-highlight="true" min="0" max="100" value="00">
+        </div><!-- /ui-block -->
+        <div class="ui-block-b">
+            
+            <select name="flip-11" id="flip-11" data-role="slider" data-mini="true">
+                <option value="off">Play</option>
+                <option value="on">Stop</option>
+            </select>
+        </div><!-- /ui-block -->
+    </div><!-- /ui-grid -->
+</form>
+		
+		</div>
+		
+		
+		    <video style="width:320px;height:240px;" src="videos/Handstand 1.mp4" controls></video>
+		</div>
+	    </div>
+    
+		
+	<footer data-role="footer" data-position="fixed">
+	    
+	    <div data-role="navbar">
+		  <ul>
+			<li><a href="#home" data-transition="fade" data-role="button" data-icon="home">Home</a></li>
+			<li><a href="#home" data-transition="slide" data-direction= "reverse" data-role="button" data-icon="arrow-l">Back</a></li>
+		  </ul>
+		</div>
+	</footer>
+
+</section>	
+	
+	
+	
+	
  <!--Page------------------------------------------------------
   LEVEL 3
   #home#newmove#->Record

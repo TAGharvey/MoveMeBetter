@@ -54,7 +54,7 @@
 			
 			<p>Add some text.</p>
 			
-			<a href="#record" data-transition="fade" data-role="button">Quick Record</a>
+			<a href="#quickRecord" data-transition="fade" data-role="button">Quick Record</a>
 			
 		</div>
 	</section>
@@ -73,6 +73,45 @@
 	</footer>
 
 </section>
+	
+	
+	
+  <!--Page------------------------------------------------------
+Quik Record
+ ------------------------------------------------------------->
+
+
+ 
+<section data-role="page" id="quickRecord">
+<header data-role="header">
+<h1>Home</h1>
+</header>
+
+<section data-role="content">
+<div data-content-theme="d" data-role="collapsible-set" data-theme="a"><!-- <div>
+			<h4>Welcome</h4>
+			<p>The record screen goes here.</p>
+			<p>Add some text.</p>
+		</div> -->
+<div id="container">
+
+
+<video autoplay="" muted=""></video>
+<script src='js/main.js'></script></div>
+</div>
+</section>
+
+<footer data-position="fixed" data-role="footer">
+<div data-role="navbar">
+<ul>
+	<li><a data-icon="home2" data-role="button" data-transition="fade" href="#home2">Home</a></li>
+	<li><a data-direction="reverse" data-icon="arrow-l" data-role="button" data-transition="slide" href="#newmove">Back</a></li>
+</ul>
+</div>
+</footer>
+</section>
+ 
+ 
  <!--Page------------------------------------------------------
  LEVEL 2
     New move
@@ -180,11 +219,7 @@
 	<section data-role="content">
 	    
 	<div data-role="collapsible-set" data-theme="a" data-content-theme="d">
-		<div>
-			<h4>Welcome</h4>
-			<p>Two videos or images side by side.</p>
-			<p>Add some text.</p>
-		</div>
+		
 		<div role="main" class="ui-content">
 		
 			<p>Assume buttons would be the video container</p>
@@ -222,30 +257,41 @@
 
   #home#newmove#Record->compare 2 videos
  ------------------------------------------------------------->
-<section data-role="page" id="playcompare">
-	<header data-role="header">
-		<h1>Compare</h1>
-	</header>		
-	<section data-role="content">
-	    
+<section data-role="page" id="playcompare">		
+    <section data-role="content">   
 	<div data-role="collapsible-set" data-theme="a" data-content-theme="d">
 	    <div>
-		
 		<div>
 		    
-			<video style="width:320px;height:240px;" src="videos/Handstand 3.mp4" controls>
-			</video>
 		    
-		<a data-role="button">Play</a>
+		    
+		    <video style="width:320px;height:240px;" src="videos/Handstand 3.mp4" controls></video>
 		
-		    
-			<video style="width:320px;height:240px;" src="videos/Handstand 1.mp4" controls>
-			</video>
-		    
+		
+		
+		<form>
+    <div class="ui-grid-a">
+        <div class="ui-block-a">
+            
+            <input type="range" name="slider-13" id="slider-13" data-mini="true" data-highlight="true" min="0" max="100" value="00">
+        </div><!-- /ui-block -->
+        <div class="ui-block-b">
+            
+            <select name="flip-11" id="flip-11" data-role="slider" data-mini="true">
+                <option value="off">Play</option>
+                <option value="on">Stop</option>
+            </select>
+        </div><!-- /ui-block -->
+    </div><!-- /ui-grid -->
+</form>
+		
+		</div>
+		
+		
+		    <video style="width:320px;height:240px;" src="videos/Handstand 1.mp4" controls></video>
 		</div>
 	    </div>
-		
-	</section>
+    
 		
 	<footer data-role="footer" data-position="fixed">
 	    
@@ -261,7 +307,7 @@
 	
 	
 	
-	
+
 	
 	
 	
