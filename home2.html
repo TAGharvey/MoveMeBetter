@@ -22,6 +22,7 @@
     <script type="text/javascript" src="js/hit238.js"></script>
 	<script type="text/javascript" src="js/core.js"></script>
 	<script type="text/javascript" src="js/savingCharacter.js"></script> -->
+	<script type="text/javascript" src="js/home2.js"></script> 
 </head> 
 <body>
 	
@@ -38,41 +39,59 @@
 	3. Compare Move
 	4. My moves
  ------------------------------------------------------------->
- <section data-role="page" id="home">
-	<header data-role="header">
-		<h1>Home</h1>
-	</header>		
-	<section data-role="content">
-	    
-	<div data-role="collapsible-set" data-theme="a" data-content-theme="d">
-		<div>
-			<h4>Hello there 'User ID' :)</h4>
-			<a href="#newmove" data-transition="slide" data-role="button">New Move</a>
-			<a href="#mymoves" data-transition="slide" data-role="button">My Moves</a>
-			<a href="#practice" data-transition="slide" data-role="button">Practice Moves</a>
-			<a href="#compare" data-transition="slide" data-role="button">Compare Moves</a>
-			
-			<p>Add some text.</p>
-			
-			<a href="#record" data-transition="fade" data-role="button">Quick Record</a>
-			
-		</div>
-	</section>
-		
-	<footer data-role="footer" data-position="fixed">
-	<div data-role="navbar">
-		<ul>
-			<li>
-				<a href="index.html" data-transition="slide" data-role="button" rel="external"data-icon="arrow-l">Log Out</a>
-			</li>
-			
-			<li><a href="JavaScript:window.close()" data-transition="slide" data-role="button" data-icon="delete" rel="external">EXIT</a>
-			</li>
-		</ul>
-		</div>
-	</footer>
+ 
+ 
+ <div data-role="page" class="jqm-demos ui-responsive-panel" id="home2" data-url="home2">
+    <div data-role="header" data-theme="f" data-position="fixed">
+        <h1>Move Me Better</h1>
+        <a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+        <a href="#add-form" data-icon="gear" data-iconpos="notext">Add</a>
+    </div><!-- /header -->
+    
+    
+    <div data-role="content" class="jqm-content">
+        <div data-demo-html="#panel-fixed-page1" data-demo-css="true"></div><!--/demo-html -->
+    </div><!-- /content -->
+    
+    
+    <div data-role="footer" data-position="fixed" data-theme="f">
+        <h4>
+	    <fieldset class="ui-grid-b">
+		<div class="ui-block-a"><a href="#nav-panel" data-theme="c" data-role="button">Menu</a></div>
+		<div class="ui-block-b"><button type="submit" data-theme="a" >Quick Capture</button></div>
+		<div class="ui-block-c"><a href="#add-form" data-theme="c" data-role="button">Add</a></div>
+	    </fieldset>
+	</h4>
+    </div><!-- /footer -->
+    
+    
+    <div data-role="panel" data-position-fixed="true" data-display="overlay" data-theme="a" id="nav-panel">
+        <ul data-role="listview" data-theme="a" class="nav-search">
+            <li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
+                <li><a href="#newmove" data-transition="slide">New Move</a></li>
+                <li><a href="#mymoves" data-transition="slide">My Moves</a></li>
+                <li><a href="#practice" data-transition="slide">Practice Moves</a></li>
+                <li><a href="#compare" data-transition="slide">Compare Moves</a></li>
+        </ul>
+    </div><!-- /panel -->
+    
+    
+    <div data-role="panel" data-position="right" data-position-fixed="true" data-display="overlay" data-theme="b" id="add-form">
+        <form class="userform">
+            <h2>Login</h2>
+            <label for="name">Username:</label>
+            <input type="text" name="name" id="name" value="" data-clear-btn="true" data-mini="true">
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" value="" data-clear-btn="true" autocomplete="off" data-mini="true">
+            <div class="ui-grid-a">
+                <div class="ui-block-a"><a href="#" data-rel="close" data-role="button" data-theme="c" data-mini="true">Cancel</a></div>
+                <div class="ui-block-b"><a href="#" data-rel="close" data-role="button" data-theme="b" data-mini="true">Save</a></div>
+            </div>
+        </form>
+    </div><!-- /panel -->
+</div>
+ 
 
-</section>
  <!--Page------------------------------------------------------
  LEVEL 2
     New move
@@ -96,8 +115,8 @@
 	<footer data-role="footer" data-position="fixed">
 		<div data-role="navbar">
 		  <ul>
-			<li><a href="#home" data-transition="fade" data-role="button" data-icon="home">Home</a></li>
-			<li><a href="#home" data-transition="slide" data-direction= "reverse" data-role="button" data-icon="arrow-l">Back</a></li>
+			<li><a href="#home2" data-transition="fade" data-role="button" data-icon="home">Home</a></li>
+			<li><a href="#home2" data-transition="slide" data-direction= "reverse" data-role="button" data-icon="arrow-l">Back</a></li>
 		  </ul>
 		</div>
 		
@@ -128,8 +147,8 @@
 	<footer data-role="footer" data-position="fixed">
 		<div data-role="navbar">
 		  <ul>
-			<li><a href="#home" data-transition="fade" data-role="button" data-icon="home">Home</a></li>
-			<li><a href="#home" data-transition="slide" data-direction= "reverse" data-role="button" data-icon="arrow-l">Back</a></li>
+			<li><a href="#home2" data-transition="fade" data-role="button" data-icon="home">Home</a></li>
+			<li><a href="#home2" data-transition="slide" data-direction= "reverse" data-role="button" data-icon="arrow-l">Back</a></li>
 		  </ul>
 		</div>
 	</footer>
@@ -161,8 +180,8 @@
 		
 	    <div data-role="navbar">
 		  <ul>
-			<li><a href="#home" data-transition="fade" data-role="button" data-icon="home">Home</a></li>
-			<li><a href="#home" data-transition="slide" data-direction= "reverse" data-role="button" data-icon="arrow-l">Back</a></li>
+			<li><a href="#home2" data-transition="fade" data-role="button" data-icon="home">Home</a></li>
+			<li><a href="#home2" data-transition="slide" data-direction= "reverse" data-role="button" data-icon="arrow-l">Back</a></li>
 		  </ul>
 		</div>
 	</footer>
@@ -197,8 +216,8 @@
 	    
 	    <div data-role="navbar">
 		  <ul>
-			<li><a href="#home" data-transition="fade" data-role="button" data-icon="home">Home</a></li>
-			<li><a href="#home" data-transition="slide" data-direction= "reverse" data-role="button" data-icon="arrow-l">Back</a></li>
+			<li><a href="#home2" data-transition="fade" data-role="button" data-icon="home">Home</a></li>
+			<li><a href="#home2" data-transition="slide" data-direction= "reverse" data-role="button" data-icon="arrow-l">Back</a></li>
 		  </ul>
 		</div>
 	</footer>
@@ -248,7 +267,7 @@
 <footer data-position="fixed" data-role="footer">
 <div data-role="navbar">
 <ul>
-	<li><a data-icon="home" data-role="button" data-transition="fade" href="#home">Home</a></li>
+	<li><a data-icon="home2" data-role="button" data-transition="fade" href="#home2">Home</a></li>
 	<li><a data-direction="reverse" data-icon="arrow-l" data-role="button" data-transition="slide" href="#newmove">Back</a></li>
 </ul>
 </div>
@@ -316,10 +335,10 @@
 				</div>
 				<div role="main" class="ui-content">
 					<p>Your move has been saved </p>
-					<a href="#home" data-transition="slide" data-direction= "reverse" data-role="button">OK</a>
+					<a href="#home2" data-transition="slide" data-direction= "reverse" data-role="button">OK</a>
 				</div>
 			</div>
-<!--			<a href="#home" data-transition="slide" data-role="button">Cancel</a> -->
+<!--			<a href="#home2" data-transition="slide" data-role="button">Cancel</a> -->
         </div>
 		<!-- <script type="text/javascript" src="/js/uploadfiles.js"></script> -->
 	 </div>
@@ -329,7 +348,7 @@
 	    
 	    <div data-role="navbar">
 		  <ul>
-			<li><a href="#home" data-transition="fade" data-role="button" data-icon="home">Home</a></li>
+			<li><a href="#home2" data-transition="fade" data-role="button" data-icon="home">Home</a></li>
 			<li><a href="#newmove" data-transition="slide" data-direction= "reverse" data-role="button" data-icon="arrow-l">Back</a></li>
 		  </ul>
 		</div>
@@ -357,7 +376,7 @@
 	<footer data-role="footer" data-position="fixed">
 	    <div data-role="navbar">
 		  <ul>
-			<li><a href="#home" data-transition="fade" data-role="button" data-icon="home">Home</a></li>
+			<li><a href="#home2" data-transition="fade" data-role="button" data-icon="home">Home</a></li>
 			<li><a href="#mymoves" data-transition="slide" data-direction= "reverse" data-role="button" data-icon="arrow-l">Back</a></li>
 		  </ul>
 		</div>
@@ -385,7 +404,7 @@
 	    
 	    <div data-role="navbar">
 		  <ul>
-			<li><a href="#home" data-transition="fade" data-role="button" data-icon="home">Home</a></li>
+			<li><a href="#home2" data-transition="fade" data-role="button" data-icon="home">Home</a></li>
 			<li><a href="#mymoves" data-transition="slide" data-direction= "reverse" data-role="button" data-icon="arrow-l">Back</a></li>
 		  </ul>
 		</div>
@@ -431,7 +450,7 @@
 	    
 	    <div data-role="navbar">
 		  <ul>
-			<li><a href="#home" data-transition="fade" data-role="button" data-icon="home">Home</a></li>
+			<li><a href="#home2" data-transition="fade" data-role="button" data-icon="home">Home</a></li>
 			<li><a href="#mymoves" data-transition="slide" data-direction= "reverse" data-role="button" data-icon="arrow-l">Back</a></li>
 		  </ul>
 		</div>
@@ -477,7 +496,7 @@
 	    
 	    <div data-role="navbar">
 		  <ul>
-			<li><a href="#home" data-transition="fade" data-role="button" data-icon="home">Home</a></li>
+			<li><a href="#home2" data-transition="fade" data-role="button" data-icon="home">Home</a></li>
 			<li><a href="#mymoves" data-transition="slide" data-direction= "reverse" data-role="button" data-icon="arrow-l">Back</a></li>
 		  </ul>
 		</div>
@@ -506,7 +525,7 @@
 	    
 	    <div data-role="navbar">
 		  <ul>
-			<li><a href="#home" data-transition="fade" data-role="button" data-icon="home">Home</a></li>
+			<li><a href="#home2" data-transition="fade" data-role="button" data-icon="home">Home</a></li>
 			<li><a href="#practice" data-transition="slide" data-direction= "reverse" data-role="button" data-icon="arrow-l">Back</a></li>
 		  </ul>
 		</div>
@@ -537,7 +556,7 @@
 	<footer data-role="footer" data-position="fixed">
 		<div data-role="navbar">
 		  <ul>
-			<li><a href="#home" data-transition="fade" data-role="button" data-icon="home">Home</a></li>
+			<li><a href="#home2" data-transition="fade" data-role="button" data-icon="home">Home</a></li>
 			<li><a href="#practice" data-transition="slide" data-direction= "reverse" data-role="button" data-icon="arrow-l">Back</a></li>
 		  </ul>
 		</div>
@@ -565,7 +584,7 @@
 	<footer data-role="footer" data-position="fixed">
 	    <div data-role="navbar">
 		  <ul>
-			<li><a href="#home" data-transition="fade" data-role="button" data-icon="home">Home</a></li>
+			<li><a href="#home2" data-transition="fade" data-role="button" data-icon="home">Home</a></li>
 			<li><a href="#selectmove" data-transition="slide" data-direction= "reverse" data-role="button" data-icon="arrow-l">Back</a></li>
 		  </ul>
 		</div>
@@ -593,7 +612,7 @@
 	    
 	    <div data-role="navbar">
 		  <ul>
-			<li><a href="#home" data-transition="fade" data-role="button" data-icon="home">Home</a></li>
+			<li><a href="#home2" data-transition="fade" data-role="button" data-icon="home">Home</a></li>
 			<li><a href="#selectmove" data-transition="slide" data-direction= "reverse" data-role="button" data-icon="arrow-l">Back</a></li>
 		  </ul>
 		</div>
@@ -626,7 +645,7 @@
 	    
 	    <div data-role="navbar">
 		  <ul>
-			<li><a href="#home" data-transition="fade" data-role="button" data-icon="home">Home</a></li>
+			<li><a href="#home2" data-transition="fade" data-role="button" data-icon="home">Home</a></li>
 			<li><a href="#selectmove" data-transition="slide" data-direction= "reverse" data-role="button" data-icon="arrow-l">Back</a></li>
 		  </ul>
 		</div>
@@ -660,7 +679,7 @@
 	    
 	    <div data-role="navbar">
 		  <ul>
-			<li><a href="#home" data-transition="fade" data-role="button" data-icon="home">Home</a></li>
+			<li><a href="#home2" data-transition="fade" data-role="button" data-icon="home">Home</a></li>
 			<li><a href="#selectmove" data-transition="slide" data-direction= "reverse" data-role="button" data-icon="arrow-l">Back</a></li>
 		  </ul>
 		</div>
