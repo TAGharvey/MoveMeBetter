@@ -43,9 +43,7 @@
 		<h1>Home</h1>
 	</header>		
 	<section data-role="content">
-	    
-	<div data-role="collapsible-set" data-theme="a" data-content-theme="d">
-		<div>
+		<div data-role="collapsible-set" data-theme="a" data-content-theme="d">
 			<h4>Hello there 'User ID' :)</h4>
 			<a href="#newmove" data-transition="slide" data-role="button">New Move</a>
 			<a href="#mymoves" data-transition="slide" data-role="button">My Moves</a>
@@ -79,36 +77,31 @@
   <!--Page------------------------------------------------------
 Quik Record
  ------------------------------------------------------------->
-
-
- 
 <section data-role="page" id="quickRecord">
-<header data-role="header">
-<h1>Home</h1>
-</header>
+	<header data-role="header">
+		<h1>Home</h1>
+	</header>
 
-<section data-role="content">
-<div data-content-theme="d" data-role="collapsible-set" data-theme="a"><!-- <div>
+	<section data-role="content">
+		<div data-content-theme="d" data-role="collapsible-set" data-theme="a"><!-- <div>
 			<h4>Welcome</h4>
 			<p>The record screen goes here.</p>
 			<p>Add some text.</p>
 		</div> -->
-<div id="container">
-
-
-<video autoplay="" muted=""></video>
-<script src='js/main.js'></script></div>
-</div>
-</section>
-
-<footer data-position="fixed" data-role="footer">
-<div data-role="navbar">
-<ul>
-	<li><a data-icon="home2" data-role="button" data-transition="fade" href="#home2">Home</a></li>
-	<li><a data-direction="reverse" data-icon="arrow-l" data-role="button" data-transition="slide" href="#newmove">Back</a></li>
-</ul>
-</div>
-</footer>
+			<div id="container">
+				<video autoplay="" muted=""></video>
+				<script src='js/main.js'></script>
+			</div>
+		</div>
+	</section>
+	<footer data-position="fixed" data-role="footer">
+		<div data-role="navbar">
+			<ul>
+				<li><a data-icon="home2" data-role="button" data-transition="fade" href="#home2">Home</a></li>
+				<li><a data-direction="reverse" data-icon="arrow-l" data-role="button" data-transition="slide" href="#newmove">Back</a></li>
+			</ul>
+		</div>
+	</footer>
 </section>
  
  
@@ -124,11 +117,12 @@ Quik Record
 	</header>		
 	<section data-role="content">
 	    
-	<div data-role="collapsible-set" data-theme="a" data-content-theme="d">
-		<div>
-			<p>You can chose to film a move or add one previously saved on your device<p>
-			<a href="#record" data-transition="slide" data-role="button">Record</a>
-			<a href="#upload" data-transition="slide" data-role="button">Upload</a>
+		<div data-role="collapsible-set" data-theme="a" data-content-theme="d">
+			<div>
+				<p>You can chose to film a move or add one previously saved on your device<p>
+				<a href="#record" data-transition="slide" data-role="button">Record</a>
+				<a href="#upload" data-transition="slide" data-role="button">Upload</a>
+			</div>
 		</div>
 	</section>
 		
@@ -159,9 +153,10 @@ Quik Record
 		<div>
 	<!--		<a href="#list01" data-transition="slide" data-role="button">Flag</a>
 			<a href="#list02" data-transition="slide" data-role="button">Hurricane</a> -->
-			<a href="#list03" data-transition="slide" data-role="button">Handstand</a>
+			<a href="#handstand03" data-transition="slide" data-role="button">Handstand</a>
 			<a href="#list04" data-transition="slide" data-role="button">SneakyV</a>
 		</div>
+	</div>
 	</section>
 		
 	<footer data-role="footer" data-position="fixed">
@@ -227,6 +222,7 @@ Quik Record
 			<a href="#dialogPage" data-rel="dialog" data-role="button">Video 2</a>
 			<a href="#playcompare" data-transition="fade" data-role="button">Play</a>
 		</div>
+		</div>
 	</section>
 		
 	<footer data-role="footer" data-position="fixed">
@@ -261,40 +257,27 @@ Quik Record
     <section data-role="content">   
 	<div data-role="collapsible-set" data-theme="a" data-content-theme="d">
 	    <div>
-		<div>
-		    
-		    
-		    
-		    <video style="width:320px;height:240px;" src="videos/Handstand 3.mp4" controls></video>
-		
-		
-		
-		<form>
-    <div class="ui-grid-a">
-        <div class="ui-block-a">
-            
-            <input type="range" name="slider-13" id="slider-13" data-mini="true" data-highlight="true" min="0" max="100" value="00">
-        </div><!-- /ui-block -->
-        <div class="ui-block-b">
-            
-            <select name="flip-11" id="flip-11" data-role="slider" data-mini="true">
-                <option value="off">Play</option>
-                <option value="on">Stop</option>
-            </select>
-        </div><!-- /ui-block -->
-    </div><!-- /ui-grid -->
-</form>
-		
+			<div>
+				<video style="width:320px;height:240px;" src="videos/Handstand 3.mp4" controls></video>
+				<form>
+					<div class="ui-grid-a">
+						<div class="ui-block-a">
+							<input type="range" name="slider-13" id="slider-13" data-mini="true" data-highlight="true" min="0" max="100" value="00">
+						</div><!-- /ui-block -->
+						<div class="ui-block-b">
+							<select name="flip-11" id="flip-11" data-role="slider" data-mini="true">
+								<option value="off">Play</option>
+								<option value="on">Stop</option>
+							</select>
+						</div><!-- /ui-block -->
+					</div><!-- /ui-grid -->
+				</form>
+			</div>
+				<video style="width:320px;height:240px;" src="videos/Handstand 1.mp4" controls></video>
 		</div>
-		
-		
-		    <video style="width:320px;height:240px;" src="videos/Handstand 1.mp4" controls></video>
-		</div>
-	    </div>
-    
-		
-	<footer data-role="footer" data-position="fixed">
-	    
+	</div>
+	</section>
+    <footer data-role="footer" data-position="fixed">
 	    <div data-role="navbar">
 		  <ul>
 			<li><a href="#home" data-transition="fade" data-role="button" data-icon="home">Home</a></li>
@@ -302,22 +285,11 @@ Quik Record
 		  </ul>
 		</div>
 	</footer>
-
 </section>	
-	
-	
-	
-
-	
-	
-	
- <!--Page------------------------------------------------------
+<!--Page------------------------------------------------------
   LEVEL 3
   #home#newmove#->Record
  ------------------------------------------------------------->
-
-
- 
 <section data-role="page" id="record">
 <header data-role="header">
 <h1>Home</h1>
@@ -348,14 +320,12 @@ Quik Record
 </div>
 </footer>
 </section>
-
  <!--Page------------------------------------------------------
   LEVEL 3
   #home#newmove#->Upload
  ------------------------------------------------------------->
- <section data-role="page" id="upload">
- 
-		<!-- <style>
+<section data-role="page" id="upload">
+ 		<!-- <style>
 			#preview {
 				width: 80%; max-width: 300px;
 			}
@@ -368,22 +338,18 @@ Quik Record
 			 overflow: hidden;
 			}
 		</style> -->
-		
 	<header data-role="header">
 		<h1>Upload</h1>
 	</header>		
 	<section data-role="content">
-	    
-	<div data-role="collapsible-set" data-theme="a" data-content-theme="d">
-	
-		<div>
-		<p><strong>Move Name</strong></p>
+		<div data-role="collapsible-set" data-theme="a" data-content-theme="d">
+			<p><strong>Move Name</strong></p>
 			<input type=text list=moves placeholder="select an existing move or type a new one" >
-			<datalist id=moves >
-				<option> Flag
-				<option> Handstand
-				<option> Hurricane
-				<option> SneakyV
+			<datalist id=moves>
+				<option> Flag </option>
+				<option> Handstand</option>
+				<option> Hurricane</option>
+				<option> SneakyV</option>
 			</datalist>
 		</div>
 		<br />
@@ -416,7 +382,6 @@ Quik Record
 <!--			<a href="#home" data-transition="slide" data-role="button">Cancel</a> -->
         </div>
 		<!-- <script type="text/javascript" src="/js/uploadfiles.js"></script> -->
-	 </div>
 	</section>
 		
 	<footer data-role="footer" data-position="fixed">
@@ -428,14 +393,12 @@ Quik Record
 		  </ul>
 		</div>
 	</footer>
-
 </section>
-
 <!--Page------------------------------------------------------
   LEVEL 3
   #home#mymove#->list01 Flag"Progress"
  ------------------------------------------------------------->
-  <section data-role="page" id="list01">
+ <section data-role="page" id="list01">
 	<header data-role="header">
 		<h1>myMove - Flag</h1>
 	</header>		
@@ -490,7 +453,7 @@ Quik Record
   LEVEL 3
   #home#mymove#->list03 - Handstand "Progress"
  ------------------------------------------------------------->
- <section data-role="page" id="list03">
+ <section data-role="page" id="handstand03">
 	<header data-role="header">
 		<h1>myMoves</h1>
 	</header>		
@@ -520,7 +483,6 @@ Quik Record
 			</div>
 		</div>
 	</section>
-		
 	<footer data-role="footer" data-position="fixed">
 	    
 	    <div data-role="navbar">
@@ -530,7 +492,6 @@ Quik Record
 		  </ul>
 		</div>
 	</footer>
-
 </section>
 <!--Page------------------------------------------------------
   LEVEL 3
@@ -565,20 +526,17 @@ Quik Record
 				</p>
 			</div>
 		</div>
-	</section>
-		
+	</section>		
 	<footer data-role="footer" data-position="fixed">
-	    
-	    <div data-role="navbar">
-		  <ul>
-			<li><a href="#home" data-transition="fade" data-role="button" data-icon="home">Home</a></li>
-			<li><a href="#mymoves" data-transition="slide" data-direction= "reverse" data-role="button" data-icon="arrow-l">Back</a></li>
-		  </ul>
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-transition="fade" data-role="button" data-icon="home">Home</a></li>
+				<li><a href="#mymoves" data-transition="slide" data-direction= "reverse" data-role="button" data-icon="arrow-l">Back</a></li>
+			</ul>
 		</div>
 	</footer>
 
 </section>
-
 <!--Page------------------------------------------------------
   LEVEL 3
   #home#practice#->Random
@@ -589,7 +547,6 @@ Quik Record
 	</header>		
 	<section data-role="content">
 	<div data-role="collapsible-set" data-theme="a" data-content-theme="d">
-		<div>
 			<h4>Welcome</h4>
 			<p>Random video will be played here.</p>
 			<p>Add some text.</p>
@@ -607,7 +564,6 @@ Quik Record
 	</footer>
 
 </section>
-
 <!--Page------------------------------------------------------
   LEVEL 3
     Select move
@@ -620,7 +576,6 @@ Quik Record
 	<section data-role="content">
 	    <p>Please select a move to view your related videos</p>
 	<div data-role="collapsible-set" data-theme="a" data-content-theme="d">
-		<div>
 	<!--		<a href="#selectmove01" data-transition="slide" data-role="button">Flag</a>
 			<a href="#selectmove02" data-transition="slide" data-role="button">Hurricane</a> -->
 			<a href="#selectmove03" data-transition="slide" data-role="button">Handstand</a>
@@ -638,7 +593,6 @@ Quik Record
 	</footer>
 
 </section>
-
 <!--Page------------------------------------------------------
   LEVEL 3
   #home#mymove#-> Flag "Selection"
@@ -714,6 +668,7 @@ Quik Record
 					</video>
 				</p>
 			</div>
+			</div>
 	</section>
 		
 	<footer data-role="footer" data-position="fixed">
@@ -761,11 +716,6 @@ Quik Record
 	</footer>
 
 </section>
-
-
-
-
-
 <!--Page------------------------------------------------------
     Save File
     >>	
@@ -777,7 +727,6 @@ Quik Record
 	<section data-role="content">
 	    
 	<div data-role="collapsible-set" data-theme="a" data-content-theme="d">
-		<div>
 			<h4>Welcome</h4>
 			<p>Details to save maove.</p>
 			<p>Add some text.</p>
@@ -800,8 +749,7 @@ Quik Record
 	</header>		
 	<section data-role="content">
 	    
-	<div data-role="collapsible-set" data-theme="a" data-content-theme="d">
-		<div>
+		<div data-role="collapsible-set" data-theme="a" data-content-theme="d">
 			<h4>Play</h4>
 			<p>Play back video or images.</p>
 		</div>
@@ -813,8 +761,5 @@ Quik Record
 	</footer>
 
 </section>
-
-
-
 </body>
 </html>

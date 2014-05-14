@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" manifest="offline.appcache">
-<!------------------------------------------------------------
+<!--
     Notes:
- ------------------------------------------------------------->
+ -->
 <head>
     <title>App Name</title>
     <meta charset="utf-8">
@@ -31,14 +31,14 @@
     </section>
 	
 
- <!--Page------------------------------------------------------
+ <!--Page--
  LEVEL 1
     Home screen
     >> 	1. New Move
 	2. Practice Move
 	3. Compare Move
 	4. My moves
- ------------------------------------------------------------->
+ -->
  
  
  <div data-role="page" class="jqm-demos ui-responsive-panel" id="home2" data-url="home2">
@@ -92,9 +92,9 @@
 </div>
  
 
-  <!--Page------------------------------------------------------
+  <!--Page--
 Quik Record
- ------------------------------------------------------------->
+ -->
 
 
  
@@ -106,8 +106,7 @@ Quik Record
 
 
 <video autoplay="" muted=""></video>
-<script src='js/main.js'></script></div>
-</div>
+<script src='js/main.js'></script>
 </section>
 
 <footer data-position="fixed" data-role="footer">
@@ -121,12 +120,12 @@ Quik Record
 </section>
  
  
- <!--Page------------------------------------------------------
+ <!--Page--
  LEVEL 2
     New move
 	3. Record
 	4. Upload
- ------------------------------------------------------------->
+ -->
  <section data-role="page" id="newmove">
 	<header data-role="header">
 		<h1>New Move</h1>
@@ -134,7 +133,6 @@ Quik Record
 	<section data-role="content">
 	    
 	<div data-role="collapsible-set" data-theme="a" data-content-theme="d">
-		<div>
 			<p>You can chose to film a move or add one previously saved on your device<p>
 			<a href="#record" data-transition="slide" data-role="button">Record</a>
 			<a href="#upload" data-transition="slide" data-role="button">Upload</a>
@@ -153,11 +151,11 @@ Quik Record
 	</footer>
 
 </section>
- <!--Page------------------------------------------------------
+ <!--Page--
   LEVEL 2
     My moves
     >	?
- ------------------------------------------------------------->
+ -->
  <section data-role="page" id="mymoves">
 	<header data-role="header">
 		<h1>My Moves</h1>
@@ -165,7 +163,6 @@ Quik Record
 	<section data-role="content">
 	    <p>Please select a move to view your related videos</p>
 	<div data-role="collapsible-set" data-theme="a" data-content-theme="d">
-		<div>
 	<!--		<a href="#list01" data-transition="slide" data-role="button">Flag</a>
 			<a href="#list02" data-transition="slide" data-role="button">Hurricane</a> -->
 			<a href="#list03" data-transition="slide" data-role="button">Handstand</a>
@@ -184,12 +181,12 @@ Quik Record
 
 </section>
 
- <!--Page------------------------------------------------------
+ <!--Page--
   LEVEL 2
     Practice
     >	1. Random
 	2. Select move
- ------------------------------------------------------------->
+ -->
  <section data-role="page" id="practice">
 	<header data-role="header">
 		<h1>Practice</h1>
@@ -197,7 +194,6 @@ Quik Record
 	<section data-role="content">
 	    
 	<div data-role="collapsible-set" data-theme="a" data-content-theme="d">
-		<div>
 			<a href="#" id="getit" data-transition="slide" data-role="button">Random move</a>
 			<a href="#selectmove" data-transition="slide" data-role="button">Select move</a>
 			<p>Would you like to practice a specific move or would you like me to pick one for you?.</p>
@@ -216,11 +212,11 @@ Quik Record
 	</footer>
 
 </section>
-<!--Page------------------------------------------------------
+<!--Page--
  LEVEL 2
     Compare
     >>	
- ------------------------------------------------------------->
+ -->
 <section data-role="page" id="compare">
 	<header data-role="header">
 		<h1>Compare Moves</h1>
@@ -238,7 +234,7 @@ Quik Record
 	    </fieldset>
 	</h4>
     </div><!-- /footer -->
-    
+    </div>
 	</section>
 	
 	
@@ -288,10 +284,10 @@ Quik Record
 	</div>
 
 	
- <!--Page------------------------------------------------------
+ <!--Page--
 
   #home#newmove#Record->compare 2 videos
- ------------------------------------------------------------->
+ -->
 <section data-role="page" id="playcompare">		
     <section data-role="content">   
 	<div data-role="collapsible-set" data-theme="a" data-content-theme="d">
@@ -326,7 +322,7 @@ Quik Record
 		    <video style="width:320px;height:240px;" src="videos/Handstand 1.mp4" controls></video>
 		</div>
 	    </div>
-    
+    </section>
 		
 	<footer data-role="footer" data-position="fixed">
 	    
@@ -343,10 +339,10 @@ Quik Record
 	
 	
 	
- <!--Page------------------------------------------------------
+ <!--Page--
   LEVEL 3
   #home#newmove#->Record
- ------------------------------------------------------------->
+ -->
 
 
  
@@ -381,10 +377,10 @@ Quik Record
 </footer>
 </section>
 
- <!--Page------------------------------------------------------
+ <!--Page--
   LEVEL 3
   #home#newmove#->Upload
- ------------------------------------------------------------->
+ -->
  <section data-role="page" id="upload">
  
 		<!-- <style>
@@ -408,14 +404,13 @@ Quik Record
 	    
 	<div data-role="collapsible-set" data-theme="a" data-content-theme="d">
 	
-		<div>
 		<p><strong>Move Name</strong></p>
 			<input type=text list=moves placeholder="select an existing move or type a new one" >
 			<datalist id=moves >
-				<option> Flag
-				<option> Handstand
-				<option> Hurricane
-				<option> SneakyV
+				<option> Flag</option>
+				<option> Handstand</option>
+				<option> Hurricane</option>
+				<option> SneakyV</option>
 			</datalist>
 		</div>
 		<br />
@@ -463,10 +458,10 @@ Quik Record
 
 </section>
 
-<!--Page------------------------------------------------------
+<!--Page--
   LEVEL 3
   #home#mymove#->list01 Flag"Progress"
- ------------------------------------------------------------->
+ -->
   <section data-role="page" id="list01">
 	<header data-role="header">
 		<h1>myMove - Flag</h1>
@@ -489,10 +484,10 @@ Quik Record
 		</div>
 	</footer>
 </section>
-<!--Page------------------------------------------------------
+<!--Page--
   LEVEL 3
   #home#mymove#->list02 - Hurricane "Progress"
- ------------------------------------------------------------->
+ -->
  <section data-role="page" id="list02">
 	<header data-role="header">
 		<h1>myMoves</h1>
@@ -518,10 +513,10 @@ Quik Record
 	</footer>
 
 </section>
-<!--Page------------------------------------------------------
+<!--Page--
   LEVEL 3
   #home#mymove#->list03 - Handstand "Progress"
- ------------------------------------------------------------->
+ -->
  <section data-role="page" id="list03">
 	<header data-role="header">
 		<h1>myMoves</h1>
@@ -564,10 +559,10 @@ Quik Record
 	</footer>
 
 </section>
-<!--Page------------------------------------------------------
+<!--Page--
   LEVEL 3
   #home#mymove#->list04 - SneakyV "Progress"
- ------------------------------------------------------------->
+ -->
  <section data-role="page" id="list04">
 	<header data-role="header">
 		<h1>myMoves</h1>
@@ -611,10 +606,10 @@ Quik Record
 
 </section>
 
-<!--Page------------------------------------------------------
+<!--Page--
   LEVEL 3
   #home#practice#->Random
- ------------------------------------------------------------->
+ -->
  <section data-role="page" id="random">
 	<header data-role="header">
 		<h1>Random</h1>
@@ -625,6 +620,7 @@ Quik Record
 			<h4>Welcome</h4>
 			<p>Random video will be played here.</p>
 			<p>Add some text.</p>
+		</div>
 		</div>
 	</section>
 		
@@ -640,11 +636,11 @@ Quik Record
 
 </section>
 
-<!--Page------------------------------------------------------
+<!--Page--
   LEVEL 3
     Select move
     >	?
- ------------------------------------------------------------->
+ -->
  <section data-role="page" id="selectmove">
 	<header data-role="header">
 		<h1>Select Move</h1>
@@ -657,6 +653,7 @@ Quik Record
 			<a href="#selectmove02" data-transition="slide" data-role="button">Hurricane</a> -->
 			<a href="#selectmove03" data-transition="slide" data-role="button">Handstand</a>
 			<a href="#selectmove04" data-transition="slide" data-role="button">SneakyV</a>
+		</div>
 		</div>
 	</section>
 		
@@ -671,10 +668,10 @@ Quik Record
 
 </section>
 
-<!--Page------------------------------------------------------
+<!--Page--
   LEVEL 3
   #home#mymove#-> Flag "Selection"
- ------------------------------------------------------------->
+ -->
   <section data-role="page" id="selectmove01">
 	<header data-role="header">
 		<h1>Move Selected - Flag</h1>
@@ -697,10 +694,10 @@ Quik Record
 		</div>
 	</footer>
 </section>
-<!--Page------------------------------------------------------
+<!--Page--
   LEVEL 3
   #home#mymove#->list02 - Hurricane "Selected"
- ------------------------------------------------------------->
+ -->
  <section data-role="page" id="selectmove02">
 	<header data-role="header">
 		<h1>Move Selected - Hurricane</h1>
@@ -726,10 +723,10 @@ Quik Record
 	</footer>
 
 </section>
-<!--Page------------------------------------------------------
+<!--Page--
   LEVEL 3
   #home#mymove#-> Handstand "Selected"
- ------------------------------------------------------------->
+ -->
  <section data-role="page" id="selectmove03">
 	<header data-role="header">
 		<h1>Move Selected - Handstand</h1>
@@ -746,6 +743,7 @@ Quik Record
 					</video>
 				</p>
 			</div>
+			</div>
 	</section>
 		
 	<footer data-role="footer" data-position="fixed">
@@ -759,10 +757,10 @@ Quik Record
 	</footer>
 
 </section>
-<!--Page------------------------------------------------------
+<!--Page--
   LEVEL 3
   #home#mymove#->list04 - SneakyV "Selected"
- ------------------------------------------------------------->
+ -->
  <section data-role="page" id="selectmove04">
 	<header data-role="header">
 		<h1>Move Selected - SneakyV</h1>
@@ -798,10 +796,10 @@ Quik Record
 
 
 
-<!--Page------------------------------------------------------
+<!--Page--
     Save File
     >>	
- ------------------------------------------------------------->
+ -->
 <section data-role="page" id="filesave">
 	<header data-role="header">
 		<h1>Home</h1>
@@ -809,7 +807,6 @@ Quik Record
 	<section data-role="content">
 	    
 	<div data-role="collapsible-set" data-theme="a" data-content-theme="d">
-		<div>
 			<h4>Welcome</h4>
 			<p>Details to save maove.</p>
 			<p>Add some text.</p>
@@ -822,10 +819,10 @@ Quik Record
 	</footer>
 
 </section>
-<!--Page------------------------------------------------------
+<!--Page--
     Play
     >>	
- ------------------------------------------------------------->
+ -->
 <section data-role="page" id="play">
 	<header data-role="header">
 		<h1>Home</h1>
@@ -845,8 +842,5 @@ Quik Record
 	</footer>
 
 </section>
-
-
-
 </body>
 </html>
